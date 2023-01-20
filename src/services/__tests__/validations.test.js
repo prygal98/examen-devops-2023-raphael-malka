@@ -29,4 +29,11 @@ describe("Check Gamer Tag test that check if the tag is correct ", () => {
         expect(resultFalse).toBe(false);
     });
 
+    test("should return True if Tag name have a minimum of 1 special caracter, if less than 1  it returns false", () => {
+        const resultTrue = checkGamerTag("raphael@");
+        const resultFalse = checkGamerTag("raphaelmalka");
+        expect(resultTrue).toBe(true);
+        expect(resultFalse).toBe(false);
+    });
+
 });

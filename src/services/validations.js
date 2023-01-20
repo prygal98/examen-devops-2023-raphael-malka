@@ -3,7 +3,9 @@
 const isEmpty = (label) => !label || label.length === 0;
 
 function checkGamerTag(tagName) {
-    if (tagName.length < 8) {
+    let specialChar = "/[!@#$%^&*()_+={};:|,.<>?]/";
+
+    if (tagName.length < 8 && tagName.test(specialChar)) {
         return false;
     } else {
         return true;
