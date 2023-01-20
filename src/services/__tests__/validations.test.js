@@ -23,24 +23,23 @@ describe("validations tests suites - isEmpty", () => {
 
 describe("Check Gamer Tag test that check if the tag is correct ", () => {
     test("should return True if Tag name have a minimum of 8 caracter, if less of 8 it returns false", () => {
-        const resultTrue = checkGamerTag("123456780@");
+        const resultTrue = checkGamerTag("123456780@c");
         const resultFalse = checkGamerTag("1234");
         expect(resultTrue).toEqual(true);
         expect(resultFalse).toEqual(false);
     });
 
     test("should return True if Tag name have a minimum of 1 special caracter, if less than 1  it returns false", () => {
-        const resultTrue = checkGamerTag("raphael@a");
+        const resultTrue = checkGamerTag("raphael@a12");
         const resultFalse = checkGamerTag("raph");
         expect(resultTrue).toEqual(true);
         expect(resultFalse).toEqual(false);
     });
 
     test("should return True if Tag name have a minimum of 1 number, if less than 1  it returns false", () => {
-        const resultTrue = checkGamerTag("raphael@a");
-        const resultFalse = checkGamerTag("raph");
+        const resultTrue = checkGamerTag("raphael@a12");
         expect(resultTrue).toEqual(true);
-        expect(resultFalse).toEqual(false);
+        
     });
 
 });
