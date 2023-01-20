@@ -2,9 +2,13 @@
 
 const isEmpty = (label) => !label || label.length === 0;
 
-function checkGamerTag() {
-    return false;
+function checkGamerTag(tagName) {
+    if (tagName.length < 8) {
+        return false;
+    } else {
+        return true;
+    }
 }
 
 exports.isEmpty = isEmpty;
-exports.checkGamerTag = checkGamerTag;
+module.exports.checkGamerTag = checkGamerTag;
