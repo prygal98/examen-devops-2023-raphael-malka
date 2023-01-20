@@ -3,7 +3,10 @@
 const isEmpty = (label) => !label || label.length === 0;
 
 function checkGamerTag(tagName) {
-    if (tagName.length < 8 || tagName.match('^(?=.[!@#$%^&])[a-zA-Z0-9!@#$%^&*]$' ) === false) {
+    if (
+        tagName.length < 8 ||
+        tagName.match("^(?=.[!@#$%^&])[a-zA-Z0-9!@#$%^&*]$") === false
+    ) {
         return false;
     } else {
         return true;

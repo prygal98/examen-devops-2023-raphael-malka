@@ -20,7 +20,6 @@ describe("validations tests suites - isEmpty", () => {
 
 // TODO: Create tests suite for validation function
 
-
 describe("Check Gamer Tag test that check if the tag is correct ", () => {
     test("should return True if Tag name have a minimum of 8 caracter, if less of 8 it returns false", () => {
         const resultTrue = checkGamerTag("123456780@c");
@@ -39,7 +38,5 @@ describe("Check Gamer Tag test that check if the tag is correct ", () => {
     test("should return True if Tag name have a minimum of 1 number, if less than 1  it returns false", () => {
         const resultTrue = checkGamerTag("raphael@a12");
         expect(resultTrue).toEqual(true);
-        
     });
-
 });
